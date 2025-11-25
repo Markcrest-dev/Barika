@@ -32,8 +32,17 @@ This website showcases the work of Barika (@shes_blackk_), a creator who celebra
 - Built with vanilla HTML, CSS, and JavaScript (no frameworks)
 - Uses Font Awesome for social media icons
 - Fully responsive with mobile-first approach
-- Optimized background images for all device sizes
+- Separate background images for desktop and mobile devices for optimal performance
 - CSS Grid and Flexbox for modern layouts
+
+## Mobile Optimization
+
+For optimal performance on mobile devices, the website uses separate, resized background images specifically designed for smaller screens:
+
+- Desktop images are stored in the `Images/` directory
+- Mobile-optimized images are stored in the `Images/mobile/` directory
+- Media queries automatically switch between image sets based on screen size
+- This approach reduces bandwidth usage and improves loading times on mobile devices
 
 ## Color Palette
 

@@ -24,26 +24,53 @@ body {
 /* Page-specific backgrounds */
 #home-page {
     background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
-                url('Images/hero-image.jpg') no-repeat center center scroll;
+                url('Images/hero-image.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #about-page {
     background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
-                url('Images/about-bg.jpg') no-repeat center center scroll;
+                url('Images/about-bg.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #collection-page {
     background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
-                url('Images/collection-bg.jpg') no-repeat center center scroll;
+                url('Images/collection-bg.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #contact-page {
     background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
-                url('Images/contact-bg.jpg') no-repeat center center scroll;
+                url('Images/contact-bg.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+/* High resolution background images for larger screens */
+@media (min-width: 1200px) {
+    #home-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/hero-image.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    #about-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/about-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    #collection-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/collection-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    #contact-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/contact-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
 }
 
 .container {
@@ -234,11 +261,13 @@ header {
     color: var(--cream-highlight);
     font-size: 1.5rem;
     transition: var(--transition);
+    text-decoration: none; /* Remove underline from social icon links */
 }
 
 .social-icon:hover {
     background-color: var(--warm-bronze);
     transform: translateY(-3px);
+    text-decoration: none; /* Ensure no underline on hover */
 }
 
 /* Page Titles */
@@ -783,6 +812,59 @@ footer {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1199px) {
+    #home-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/hero-image.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    #about-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/about-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    #collection-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/collection-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    #contact-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/contact-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile-optimized background images */
+    #home-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/mobile/hero-image-mobile.jpg') no-repeat center center scroll;
+        background-size: cover;
+    }
+    
+    #about-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/mobile/about-bg-mobile.jpg') no-repeat center center scroll;
+        background-size: cover;
+    }
+    
+    #collection-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/mobile/collection-bg-mobile.jpg') no-repeat center center scroll;
+        background-size: cover;
+    }
+    
+    #contact-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/mobile/contact-bg-mobile.jpg') no-repeat center center scroll;
+        background-size: cover;
+    }
+}
+
 @media (max-width: 576px) {
     .hero-title {
         font-size: 2.5rem;
@@ -798,5 +880,30 @@ footer {
     
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Ensure mobile-optimized images are used on extra small screens */
+    #home-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/mobile/hero-image-mobile.jpg') no-repeat center center scroll;
+        background-size: cover;
+    }
+    
+    #about-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/mobile/about-bg-mobile.jpg') no-repeat center center scroll;
+        background-size: cover;
+    }
+    
+    #collection-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/mobile/collection-bg-mobile.jpg') no-repeat center center scroll;
+        background-size: cover;
+    }
+    
+    #contact-page {
+        background: linear-gradient(135deg, rgba(74, 46, 35, 0.8) 0%, rgba(27, 27, 27, 0.9) 100%), 
+                    url('Images/mobile/contact-bg-mobile.jpg') no-repeat center center scroll;
+        background-size: cover;
     }
 }
