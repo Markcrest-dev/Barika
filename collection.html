@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection | Barika</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="collection-page">
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="Images/logo.png" alt="Barika Logo" class="nav-logo">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="collection.html" class="nav-link active">Collection</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-section">
+            <div class="container">
+                <h1 class="page-title">Collection</h1>
+                <p class="gallery-intro">A celebration of melanin's natural radiance and beauty</p>
+                
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Gallery items will be dynamically loaded here -->
+                </div>
+                <div class="pagination-controls">
+                    <button id="prev-page" class="btn btn-secondary pagination-btn">Previous</button>
+                    <span id="page-info" class="page-info"></span>
+                    <button id="next-page" class="btn btn-secondary pagination-btn">Next</button>
+                </div>
+                <div class="view-toggle">
+                    <button id="view-toggle-btn" class="btn btn-primary">View Videos</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal/Lightbox -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="Enlarged view">
+            <div class="modal-nav">
+                <button id="prev-modal" class="modal-nav-btn">&#10094;</button>
+                <button id="next-modal" class="modal-nav-btn">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Barika. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
